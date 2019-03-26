@@ -31,13 +31,13 @@
         <button class="dropbtn">Support 
         </button>
         <div class="dropdown-content">
-          <a href="donateByGame.aspx">Donate A Game</a>
-          <a href="donateByAmount.aspx">Donate Funds</a>
-          <a href="adSubmitPage.aspx">Post AD</a>         
+          <a href="/Support/donateByGame.aspx">Donate A Game</a>
+          <a href="/Support/donateByAmount.aspx">Donate Funds</a>
+          <a href="/Support/adSubmitPage.aspx">Post AD</a>         
         </div>
       </div>       
               </td> 
-          <td  style="width:15%"><a href="contactUs.aspx">Contact Us</a></td>
+          <td  style="width:15%"><a href="/Support/contactUs.aspx">Contact Us</a></td>
           </tr>
 
         </table>

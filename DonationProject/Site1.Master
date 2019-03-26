@@ -33,6 +33,7 @@
                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
                     </td>
+                     
                 </tr>
                 <tr style="height: 30px; left: 0; bottom: 0; background-color: #b50000; position: fixed; width: 100%; ">
                     <td class="auto-style2" width:"100%">Copyright &copy; 2019 Group4</td>
@@ -40,6 +41,30 @@
             </table>
            
         </div>
+        <div>
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
+        <asp:Timer ID="Timer1" Interval="1000" runat="server" />
+
+        <asp:UpdatePanel ID="up1" runat="server">
+
+            <Triggers>
+
+                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+
+            </Triggers>
+
+            <ContentTemplate>
+
+                 <asp:AdRotator BorderWidth="1" ID="MyAds" runat="server" Target="_blank" Width="400px" Height="246px" Style="text-align: center" DataSourceID="adsOnWebsite" />  
+                        <asp:XmlDataSource ID="adsOnWebsite" runat="server"  DataFile="~/Ads/advertisements.xml"></asp:XmlDataSource>  
+
+            </ContentTemplate>
+
+        </asp:UpdatePanel>
+
+    </div>
     </form>
 </body>
 </html>

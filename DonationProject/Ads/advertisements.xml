@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+Advertisement database by John Bhatt. Simple XML Advertisement Format. 
+-->
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Ads/images/mcdonaldshappymealegg_0.jpg</ImageUrl>
+    <NavigateUrl>http://www.google.com</NavigateUrl>
+    <AlternateText>Dotnetspider</AlternateText>
+    <Keyword>Spider, Dotnet, interview, forum, answer, resources, artiles, jobs, institutes</Keyword>
+    <Impression>40</Impression>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Ads/images/3072313446_7b814f345e_b_wide.jpg</ImageUrl>
+    <NavigateUrl>http://www.google.com</NavigateUrl>
+    <AlternateText>PR's Blog</AlternateText>
+    <Keyword>Tutorial, Computer, Books, HTML, ASP.NET, CSS, Developer, Design, Website, Blog</Keyword>
+    <Impression>10</Impression>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Ads/images/Barbie-fun-printed-pop-tarts.jpg</ImageUrl>
+    <NavigateUrl>http://www.google.com</NavigateUrl>
+    <AlternateText>Questpond</AlternateText>
+    <Keyword>Dotnet, interview, forum, answer, resources, artiles, shivprasad, koirala, trainer, dvd, online school, step by step</Keyword>
+    <Impression>10</Impression>
+  </Ad>
+</Advertisements>
