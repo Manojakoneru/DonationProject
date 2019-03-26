@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="DonationProject.Site1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: xx-large;
+            text-align: center;
+            background-color: #b42d2d;
+            color: #FFFFFF;
+        }
+        .auto-style2 {
+            color: #FFFFFF;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table align="center" style="width: 100%;">
+                <tr style="height: 100px;">
+                    <td class="auto-style1">Top Tech Games</td>
+                </tr>
+                <tr style="height: auto; vertical-align: top">
+                    <td>
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr style="height: 30px; left: 0; bottom: 0; background-color: #b50000; position: fixed; width: 100%; ">
+                    <td class="auto-style2" width:"100%">Copyright &copy; 2019 Group4</td>
+                </tr>
+            </table>
+           
+        </div>
+    </form>
+</body>
+</html>
