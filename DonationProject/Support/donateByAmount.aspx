@@ -26,6 +26,17 @@
             width: 338px;
             height: 24px;
         }
+        .auto-style8 {
+            width: 355px;
+            height: 60px;
+        }
+        .auto-style9 {
+            width: 338px;
+            height: 60px;
+        }
+        .auto-style10 {
+            height: 60px;
+        }
     </style>
 </head>
 <body>
@@ -118,12 +129,12 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">
+                    <td class="auto-style8"></td>
+                    <td class="auto-style9">
                         <asp:Button ID="Button1" runat="server" Text="donate" OnClick="Button1_Click" />
-                        <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_click" Height="56px" Width="156px" />
+                        <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_click"  />
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style10"></td>
                 </tr>
                  <tr>
                     <td class="auto-style2">&nbsp;</td>

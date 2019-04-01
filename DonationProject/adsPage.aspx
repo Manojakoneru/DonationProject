@@ -19,7 +19,7 @@
 
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
-        <asp:Timer ID="Timer1" Interval="1000" runat="server" />
+        <asp:Timer ID="Timer1" Interval="2000" runat="server" />
 
         <asp:UpdatePanel ID="up1" runat="server">
 
@@ -32,7 +32,7 @@
             <ContentTemplate>
 
                  <asp:AdRotator BorderWidth="1" ID="MyAds" runat="server" Width="400px" Height="246px" Style="text-align: center" DataSourceID="adsOnWebsite" />  
-                        <asp:XmlDataSource ID="adsOnWebsite" runat="server" DataFile="~/Ads/advertisements.xml"></asp:XmlDataSource>  
+                        <asp:XmlDataSource ID="adsOnWebsite" runat="server" DataFile="~/advertisements.xml"></asp:XmlDataSource>  
 
             </ContentTemplate>
 

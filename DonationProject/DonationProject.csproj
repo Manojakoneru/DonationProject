@@ -69,12 +69,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="adsPage.aspx" />
-    <Content Include="Ads\advertisements.xml" />
+    <Content Include="advertisements.xml" />
     <Content Include="Ads\Images\3072313446_7b814f345e_b_wide.jpg" />
     <Content Include="Ads\Images\Barbie-fun-printed-pop-tarts.jpg" />
     <Content Include="Ads\Images\mcdonaldshappymealegg_0.jpg" />
+    <Content Include="Games\final\app.js" />
+    <Content Include="Games\final\back.jpg" />
+    <Content Include="Games\final\challenges.js" />
+    <Content Include="Games\final\dice-1.png" />
+    <Content Include="Games\final\dice-2.png" />
+    <Content Include="Games\final\dice-3.png" />
+    <Content Include="Games\final\dice-4.png" />
+    <Content Include="Games\final\dice-5.png" />
+    <Content Include="Games\final\dice-6.png" />
+    <Content Include="Games\final\index.html" />
+    <Content Include="Games\final\style.css" />
     <Content Include="Games\Game1\arena.png" />
     <Content Include="ChildMasterPage.aspx" />
+    <Content Include="Games\Game1\sprites.png" />
     <Content Include="Support\contactUs.aspx" />
     <Content Include="Support\donateByGame.aspx" />
     <Content Include="Games\Game1\hand.minified-1.3.8.js" />
@@ -84,7 +96,7 @@
     <Content Include="Games\Game1\ping.js" />
     <Content Include="Ads\Images\sprites.png" />
     <Content Include="Ads\Images\Statechart-diagram-for-Admin.png" />
-    <Content Include="style.css" />
+    <Content Include="Games\Game1\style.css" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -159,6 +171,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Games\final\.DS_Store" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="Games\Game1\PressStart2P.woff" />
@@ -172,7 +185,7 @@
   <ItemGroup>
     <Folder Include="Auth\" />
     <Folder Include="Home pages\" />
-    <Folder Include="Images\" />
+    <Folder Include="Support\Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

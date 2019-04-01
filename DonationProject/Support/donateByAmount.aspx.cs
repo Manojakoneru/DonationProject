@@ -38,7 +38,7 @@ namespace DonationProject
 
                 TextBox1.Focus();
 
-                Response.Redirect("MainPage.aspx");
+                Response.Redirect("~/MainPage.aspx");
 
 
             }
@@ -54,7 +54,7 @@ namespace DonationProject
 
         protected void Button2_click(object sender, EventArgs e)
         {
-            Response.Redirect("Mainpage.aspx");
+            Response.Redirect("~/Mainpage.aspx");
         }
     }
 }

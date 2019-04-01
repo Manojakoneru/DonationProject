@@ -11,7 +11,7 @@
         <button class="dropbtn">Sign Up 
         </button>
         <div class="dropdown-content">
-          <a href="index.html">Parents</a>
+          <a href="Games/Game1/index.html">Parents</a>
           <a href="#">Child</a>         
         </div>
       </div> 
