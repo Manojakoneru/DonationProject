@@ -5,27 +5,9 @@
     <div class="navbar">
         <table style="width:100%; height: 100%">
       <tr>
-      <td  style="width:15%"><a href="#home">Home</a></td>
-      <td  style="width:15%">
-          <div class="dropdown">
-        <button class="dropbtn">Sign Up 
-        </button>
-        <div class="dropdown-content">
-          <a href="Games/Game1/index.html">Parents</a>
-          <a href="#">Child</a>         
-        </div>
-      </div> 
-          </td>
-          <td  style="width:15%">
-      <div class="dropdown">
-       <button class="dropbtn">Sign In 
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Parents</a>
-          <a href="#">Child</a>         
-        </div>
-      </div> 
-              </td>        
+      <td style="width:15%"><a href="#home">Home</a></td>
+     <td  style="width:15%"><a href="Register.aspx">Signup</a></td>
+     <td  style="width:15%"><a href="login.aspx">Signin</a></td>
           <td  style="width:15%">
       <div class="dropdown">
         <button class="dropbtn">Support 

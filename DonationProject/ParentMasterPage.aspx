@@ -19,17 +19,19 @@
         <button class="dropbtn">Support 
         </button>
         <div class="dropdown-content">
-          <a href="donateByGame">Donate A Game</a>
-          <a href="donateByAmount">Donate Funds</a>         
+          <a href="/Support/donateByGame.aspx">Donate A Game</a>
+          <a href="/Support/donateByAmount.aspx">Donate Funds</a>
+          <a href="/Support/adSubmitPage.aspx">Post AD</a>         
         </div>
       </div>  
             </td> 
            <td  style="width:15%">
             <a href="#news">About Us</a>  
            </td>
+          <td  style="width:15%">
+      <a href="logout.aspx">Logout</a>
+            </td>
           </tr>
         </table>
     </div>
 </asp:Content>
-
-
