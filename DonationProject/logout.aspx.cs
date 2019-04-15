@@ -7,11 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace DonationProject
 {
-    public partial class ParentMasterPage : System.Web.UI.Page
+    public partial class logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.RemoveAll();
+            Response.Redirect("MainPage.aspx");
 
         }
     }

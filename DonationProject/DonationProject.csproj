@@ -87,6 +87,8 @@
     <Content Include="Games\Game1\arena.png" />
     <Content Include="ChildMasterPage.aspx" />
     <Content Include="Games\Game1\sprites.png" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="Support\contactUs.aspx" />
     <Content Include="Support\donateByGame.aspx" />
     <Content Include="Games\Game1\hand.minified-1.3.8.js" />
@@ -103,6 +105,7 @@
     </Content>
     <Content Include="Support\donateByAmount.aspx" />
     <Content Include="Support\adSubmitPage.aspx" />
+    <Content Include="Register.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adsPage.aspx.cs">
@@ -118,6 +121,20 @@
     </Compile>
     <Compile Include="ChildMasterPage.aspx.designer.cs">
       <DependentUpon>ChildMasterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Support\contactUs.aspx.cs">
       <DependentUpon>contactUs.aspx</DependentUpon>
@@ -168,6 +185,13 @@
     </Compile>
     <Compile Include="Support\adSubmitPage.aspx.designer.cs">
       <DependentUpon>adSubmitPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
