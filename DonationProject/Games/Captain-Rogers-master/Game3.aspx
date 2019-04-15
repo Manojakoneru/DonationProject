@@ -1,4 +1,4 @@
-﻿<%@ Page Title="TechGames" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="DonationProject.MainPage" %>
+﻿<%@ Page Title="Hextris" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="DonationProject.MainPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -11,10 +11,10 @@
         <button class="dropbtn">Sign Up 
         </button>
         <div class="dropdown-content">
-          <a href="Games/Game1/index.html">Parents</a>
-          <a href="Games/Game2/Game2.aspx">Child</a>
-          <a href="Games/Captain-Rogers-master/Game3.aspx">Captain Rogers</a>
-          <a href="Games/green-mahjong/Game4.aspx">Green Mahjong</a>
+          <a href="../Game1/index.html">Parents</a>
+          <a href="../Game2/Game2.aspx">Child</a>
+          <a href="#">Captain Rogers</a>
+          <a href="../green-mahjong/Game4.aspx">Green Mahjong</a>  
         </div>
       </div> 
           </td>
@@ -43,6 +43,9 @@
           </tr>
 
         </table>
+    </div><!--end of nav bar-->
+    <div style="float:right;position:relative">
+        <iframe src="index.html" border="0" frameborder="0" height="600" width="800" ></iframe>
     </div>
 </asp:Content>
 
