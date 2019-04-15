@@ -1,13 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="DonationProject.MainPage" %>
+﻿<%@ Page Title="TechGames" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="DonationProject.MainPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="navbar">
         <table style="width:100%; height: 100%">
       <tr>
+
       <td style="width:15%"><a href="#home">Home</a></td>
      <td  style="width:15%"><a href="Register.aspx">Signup</a></td>
      <td  style="width:15%"><a href="login.aspx">Signin</a></td>
+              
+
           <td  style="width:15%">
       <div class="dropdown">
         <button class="dropbtn">Support 
