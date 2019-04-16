@@ -80,7 +80,7 @@ namespace DonationProject
 
                         if (dt.Rows[i]["Role"].ToString() == "children")
 
-                            Response.Redirect("childMasterPage.aspx");
+                            Response.Redirect("ChildMasterPage.aspx");
 
                         else if (dt.Rows[i]["Role"].ToString() == "Parent")
 

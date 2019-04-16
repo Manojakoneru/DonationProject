@@ -99,7 +99,27 @@
                 <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Select role" ControlToValidate="rbtRole"></asp:RequiredFieldValidator> </td>
 
             </tr>
+               <tr>
 
+                <td>
+
+                   
+
+                 <asp:Label ID="Label4" runat="server" Text="SchoolEmail" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+
+                    </td>
+
+                <td>
+
+                    <asp:TextBox ID="TextBox3" runat="server" Width="150px"></asp:TextBox>
+
+                </td>
+
+                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter School email" ControlToValidate="txt_UserName"></asp:RequiredFieldValidator> </td>
+
+            </tr>
+
+     
             <tr>
 
             <td></td>

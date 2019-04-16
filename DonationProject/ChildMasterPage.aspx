@@ -41,6 +41,10 @@
           <td  style="width:15%">
       <a href="logout.aspx">Logout</a>
             </td>
+          <td>
+    <asp:Label ID="lb1" runat="server" Text="Label"></asp:Label>
+    </td>
+          
           
          
         </tr>
