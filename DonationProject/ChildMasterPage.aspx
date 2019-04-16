@@ -10,7 +10,16 @@
       <a href="#home">Home</a>
               </td>         
               <td  style="width:15%">
-      <a href="#news">Games</a>        
+      
+                  <div class="dropdown">
+                      <button class="dropbtn">Games</button>
+                        <div class="dropdown-content">
+          <a href="Games/Game1/index.html">Shooting</a>
+          <a href="Games/Game2/Game2.aspx">Hextris</a>
+          <a href="Games/Captain-Rogers-master/Game3.aspx">Captain Rogers</a>
+          <a href="Games/green-mahjong/Game4.aspx">Green Mahjong</a>
+        </div>
+                  </div>
                </td>
         <td  style="width:15%">
       <a href="#news">Leader Board</a>
