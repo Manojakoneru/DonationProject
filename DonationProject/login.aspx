@@ -51,6 +51,7 @@
     <div>
 
     <asp:Label ID="lb1" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label><br />
+            <asp:Label ID="Lb3" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label><br />
 
      <asp:Label ID="Label1" runat="server" Text="Name" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
 

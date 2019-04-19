@@ -34,75 +34,108 @@ namespace DonationProject
 
         string strConnString = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
 
-        string str, UserName, Password;
+        string str, str2, UserName, Password, u, p;
+        string status;
 
-        SqlCommand com;
+        SqlCommand com, com2;
 
-        SqlDataAdapter sqlda;
+        SqlDataAdapter sqlda, sqlda2;
 
-        DataTable dt;
+        DataTable dt, dt2;
 
-        int RowCount;
+        int RowCount, rc2; 
 
-            protected void btn_login_Click(object sender, EventArgs e)
+        protected void btn_login_Click(object sender, EventArgs e)
+
+        {
+
+            SqlConnection con = new SqlConnection(strConnString);
+            SqlConnection con1 = new SqlConnection(strConnString);
+
+            con.Open();
+            con1.Open();
+
+            str = "Select * from childTable";
+            str2 = "Select * from ParentTable";
+
+            com = new SqlCommand(str);
+            com2 = new SqlCommand(str2);
+
+            sqlda = new SqlDataAdapter(com.CommandText, con);
+            sqlda2 = new SqlDataAdapter(com2.CommandText, con1);
+
+
+            dt = new DataTable();
+            dt2 = new DataTable();
+
+            sqlda.Fill(dt);
+            sqlda2.Fill(dt2);
+
+            RowCount = dt.Rows.Count;
+            rc2 = dt2.Rows.Count;
+          
+            for (int i = 0; i < RowCount; i++)
 
             {
 
-                SqlConnection con = new SqlConnection(strConnString);
+                UserName = dt.Rows[i]["userName"].ToString();
 
-                con.Open();
+                Password = dt.Rows[i]["password"].ToString();
+                status =(dt.Rows[i]["status"]).ToString();
+                string s = "True";
+                Console.WriteLine(s);
+                Console.WriteLine("hiii",status);
 
-                str = "Select * from childreg";
-
-                com = new SqlCommand(str);
-
-                sqlda = new SqlDataAdapter(com.CommandText, con);
-
-                dt = new DataTable();
-
-                sqlda.Fill(dt);
-
-                RowCount = dt.Rows.Count;
-
-                for (int i = 0; i < RowCount; i++)
+                if (UserName.Equals(TextBox_user_name.Text) && Password.Equals(TextBox_password.Text))
 
                 {
-
-                    UserName = dt.Rows[i]["UserName"].ToString();
-
-                    Password = dt.Rows[i]["Password"].ToString();
-
-                    if (UserName == TextBox_user_name.Text && Password == TextBox_password.Text)
-
+                if(status.Equals(s))
                     {
+                    Session["userName"] = UserName;
 
-                        Session["UserName"] = UserName;
-
-                        if (dt.Rows[i]["Role"].ToString() == "children")
-
-                            Response.Redirect("ChildMasterPage.aspx");
-
-                        else if (dt.Rows[i]["Role"].ToString() == "Parent")
-
-                            Response.Redirect("ParentMasterPage.aspx");
-                       
-
+                    Response.Redirect("ChildMasterPage.aspx");
                     }
+                 else
 
-                    else
-
-                    {
-
-                        lb1.Text = "Invalid User Name or Password! Please try again!";
-
-                    }
-
+                        lb1.Text = "Sorry, your age is not verified at";
                 }
-
-
 
             }
 
+            for (int j = 0; j < rc2; j++)
+
+            {
+
+                u = dt2.Rows[j]["userName"].ToString();
+
+                p = dt2.Rows[j]["password"].ToString();
+
+                if (u == TextBox_user_name.Text && p == TextBox_password.Text)
+
+                {
+
+                    Session["userName"] = UserName;
+
+                    Response.Redirect("ParentMasterPage.aspx");
+                }
+                else
+
+                {
+
+                    Lb3.Text = "Invalid User Name or Password! Please try again!";
+
+                }
+            }
+
+            con.Close();
+            con1.Close();
+
+
         }
 
-    }
+
+
+
+
+        }
+}
