@@ -23,6 +23,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
 using System.Data.SqlClient;
+
+using System.Net.Mail;
+
 namespace DonationProject
 {
     public partial class WebForm3 : System.Web.UI.Page
@@ -51,7 +54,7 @@ namespace DonationProject
                 com.CommandType = CommandType.Text;
 
 
-                com.CommandText = "Insert into childTable values(@username,@Password,@Email,@role,@dateOfbirth,@status)";
+                com.CommandText = "Insert into childTable values(@username,@Password,@Email,@role,@dateOfbirth,@status,@schoolemail)";
 
                 com.Parameters.Clear();
 
@@ -60,13 +63,35 @@ namespace DonationProject
                 com.Parameters.AddWithValue("@Email", email.Text);
                 com.Parameters.AddWithValue("@role", RadioButtonList1.SelectedValue);
                 com.Parameters.AddWithValue("@dateOfbirth", txtDtOfBirth.Text);
+                com.Parameters.AddWithValue("@schoolemail", matternumb.Text);
+                
+                // Code for sending email to School Email ID if age is < than 18 
+                if (Int32.Parse(txtAge.Text)< 18)
+                {
+                    MailMessage mail = new MailMessage();
+                    SmtpClient client = new SmtpClient("smtp.gmail.com");
+                    mail.From = new MailAddress("toptechonlinegames@gmail.com");
+                    mail.To.Add(matternumb.Text);
+                    mail.Subject = "Age Verification Required";
+                    mail.IsBodyHtml = true;
+                    mail.Body = "Greetings," +" <br /> <br />" +"This email is from TopTech Gaming Website. One of your student has registered to our website. " +
+                        "For allowing access to play games on our website, we require you to verify the age of your student. Please reply back to us with the" +
+                        "age of the student. Here are the details of the student registered for our website:" +"<br />"+ "Name of the student: " +txt_UserName.Text+
+                        "<br />"+ "Student DOB: " +txtDtOfBirth.Text+ "<br />"+ "Thanks in advance for verfiication" +"<br />" +"<br />"+ "Thanks, "+"<br />"+"TopTech Games" ;
+                    client.Port = 587;                   
+                    client.Credentials = new System.Net.NetworkCredential("toptechonlinegames@gmail.com", "MyGames@12345");
+                    client.EnableSsl = true;                    
+                    client.Send(mail);
+                   
+
+                }
                 com.Parameters.AddWithValue("@status", 0);
 
                 Console.WriteLine("from child");
                 if (con.State == ConnectionState.Closed)
-
+                {
                     con.Open();
-
+                }
                 com.ExecuteNonQuery();
                 con.Close();
                 //if (txtAge.Text !=" 18")
