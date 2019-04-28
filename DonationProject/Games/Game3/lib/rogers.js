@@ -630,7 +630,7 @@ RogersGame = ig.Game.extend({
 		this.newItemTable();
 		ig.game.player.vel.y = 0;
 		this.oldHighscore = ig.game.storage.get('rogers-highscore');
-		// console.log('Old highscore: '+this.oldHighscore);
+		console.log('rogers: '+this.oldHighscore);
 		this.settingTheScore = false;
 	},
 	placeEntity: function(entity) {
@@ -700,9 +700,11 @@ RogersGame = ig.Game.extend({
 			this.BtnBack.update();
 			this.BtnAudio.update();
 			var newHighscore = (this.score).floor();
-			if(newHighscore > this.oldHighscore && !this.settingTheScore) {
-				ig.game.storage.setHighest('rogers-highscore',newHighscore);
-				// console.log('Old highscore: '+this.oldHighscore+', new highscore: '+newHighscore);
+            if (newHighscore > this.oldHighscore && !this.settingTheScore) {
+                alert("2");
+                ig.game.storage.setHighest('rogers-highscore', newHighscore);
+                document.cookie = "rogers" + "=" + newHighscore;
+				console.log('Old highscore: '+this.oldHighscore+', new highscore: '+newHighscore);
 				this.settingTheScore = true;
 			}
 		}
@@ -863,7 +865,8 @@ StartScreen = ig.Game.extend({
 		else {
 			this.BtnAudio.currentAnim = this.BtnAudio.anims['false'];
 		}
-		this.oldHighscore = ig.game.storage.get('rogers-highscore');
+        this.oldHighscore = ig.game.storage.get('rogers-highscore');
+        console.log("rogers:" + this.oldHighscore);
 	},
 	update: function() {
 		if(ig.input.pressed('start')) {

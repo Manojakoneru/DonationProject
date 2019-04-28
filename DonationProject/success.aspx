@@ -1,9 +1,26 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ChildMasterPage.aspx.cs" Inherits="DonationProject.ChildMasterPage" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site1.Master" CodeBehind="success.aspx.cs" Inherits="DonationProject.success" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        #Label1{
+            font-size:xx-large;
+            font-style:italic;
+            position:relative;
+            color:saddlebrown;
+            margin-left:400px;
+            margin-top:300px;
+            font-weight:bold;
+         }
+        #HyperLink1{
+            margin-left:400px;
+            margin-top:50px;
+            color:dodgerblue;
+            
+        }
+    </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="navbar">
+    <div class="navbar">
          <table style="width:100%; height: 100%">
       <tr>
           <td  style="width:15%">
@@ -45,14 +62,10 @@
           <td>
     <asp:Label ID="lb1" runat="server" Text="Label"></asp:Label>
     </td>
-          
-          
-         
-        </tr>
+          </tr>
         </table>
-    </div>
-</asp:Content>
-
-
-
-
+    </div><!--end of nav bar-->
+    <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static"></asp:Label><br />
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ChildMasterPage.aspx" ClientIDMode="Static">Click here to go Home Screen</asp:HyperLink>
+   
+    </asp:Content>

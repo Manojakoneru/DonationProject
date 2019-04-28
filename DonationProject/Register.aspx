@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="DonationProject.WebForm3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="Register.aspx.cs" Inherits="DonationProject.WebForm3" %>
 
 <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
 <script type="text/javascript">

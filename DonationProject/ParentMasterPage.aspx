@@ -12,7 +12,7 @@
       <a href="#news">Games Played</a>      
            </td>
         <td  style="width:15%">
-      <a href="#news">Leader Board</a>
+      <a href="LeaderBoard.aspx">Leader Board</a>
             </td>
         <td  style="width:15%">
       <div class="dropdown">

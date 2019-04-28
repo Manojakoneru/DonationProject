@@ -51,7 +51,10 @@ function writeHighScores() {
 		}
 	);
 	highscores = highscores.slice(0,3);
-	localStorage.setItem("highscores", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(highscores));
+    //alert(highscores[0]);
+    document.cookie = "hextris" + "=" + highscores[0];
+    //alert("3");
 }
 
 function clearSaveState() {
