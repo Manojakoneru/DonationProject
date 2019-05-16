@@ -49,6 +49,15 @@
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
+                 <tr>
+
+                    <td align="center" colspan="2">
+
+                        <asp:Label ID="lblmsg" runat="server"></asp:Label>
+
+                    </td>
+
+                </tr>
                 <tr>
                     <td class="auto-style2">
                         <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
@@ -146,7 +155,8 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
-                </tr>
+            
+                  </tr>
             </table>
 
         </div>

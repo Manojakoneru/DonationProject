@@ -85,6 +85,11 @@ namespace DonationProject
                    
 
                 }
+                else
+                {
+                    Response.Redirect("/Support/donateByAmount.aspx");
+
+                }
                 com.Parameters.AddWithValue("@status", 0);
 
                 Console.WriteLine("from child");

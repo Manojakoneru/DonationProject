@@ -31,7 +31,7 @@
 
             <ContentTemplate>
 
-                 <asp:AdRotator BorderWidth="1" ID="MyAds" runat="server" Width="400px" Height="246px" Style="text-align: center" DataSourceID="adsOnWebsite" />  
+                 <asp:AdRotator BorderWidth="1" ID="MyAds" runat="server" Width="300px" Height="236px" Style="text-align: center" DataSourceID="adsOnWebsite" />  
                         <asp:XmlDataSource ID="adsOnWebsite" runat="server" DataFile="~/advertisements.xml"></asp:XmlDataSource>  
 
             </ContentTemplate>

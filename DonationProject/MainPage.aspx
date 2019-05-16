@@ -9,8 +9,7 @@
       <td style="width:15%"><a href="#home">Home</a></td>
      <td  style="width:15%"><a href="Register.aspx">Signup</a></td>
      <td  style="width:15%"><a href="login.aspx">Signin</a></td>
-              
-
+           
           <td  style="width:15%">
       <div class="dropdown">
         <button class="dropbtn">Support 
@@ -24,8 +23,8 @@
               </td> 
           <td  style="width:15%"><a href="/Support/contactUs.aspx">Contact Us</a></td>
           </tr>
-
         </table>
     </div>
+   
 </asp:Content>
 

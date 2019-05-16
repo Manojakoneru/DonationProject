@@ -53,13 +53,13 @@
     <asp:Label ID="lb1" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label><br />
             <asp:Label ID="Lb3" runat="server" Font-Bold="True" ForeColor="#FF3300"></asp:Label><br />
 
-     <asp:Label ID="Label1" runat="server" Text="Name" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+     <asp:Label ID="Label1" runat="server" Text="UserName" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
 
            
 
         <asp:TextBox ID="TextBox_user_name" runat="server" ForeColor="#993300" Width="180px"></asp:TextBox><br />
 
-        <asp:Label ID="Label2" runat="server" Text="Password" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Password" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
 
            
 

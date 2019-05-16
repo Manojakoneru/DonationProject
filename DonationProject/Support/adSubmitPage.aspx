@@ -12,27 +12,7 @@ font-weight:normal;
 color:black; 
 }
 </style>
-    <!--<script type="text/javascript" language="javascript">
-function validate() {
-var uploadcontrol = document.getElementById('<%=fileuploadimages.ClientID%>').value;
-//Regular Expression for fileupload control.
-var reg = /^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF| .png|.PNG)$/;
-if (uploadcontrol.length > 0)
-{
-//Checks with the control value.
-if (reg.test(uploadcontrol))
-{
-return true;
-}
-else
-{
-//If the condition not satisfied shows error message.
-alert("Only .jpg, docx files are allowed!");
-return false;
-}
-}
-} //End of function validate.
-</script>-->
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -46,6 +26,15 @@ return false;
                         <br />
                     </td>
                     <td>&nbsp;</td>
+                </tr>
+                <tr>
+
+                    <td align="center" colspan="2">
+
+                        <asp:Label ID="lblmsg" ForeColor="#CCFFCC" runat="server"></asp:Label>
+
+                    </td>
+
                 </tr>
                 <tr>
                     <td class="auto-style7">
@@ -65,7 +54,7 @@ return false;
                 </tr>
                 <tr>
                     <td class="auto-style7">
-                        Add category</td>
+                        Advertisement category</td>
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                     </td>
@@ -73,7 +62,7 @@ return false;
                 </tr>
                 <tr>
                     <td class="auto-style7">
-                        Ad Description </td>
+                        Advertisement Description </td>
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                     </td>
@@ -84,19 +73,13 @@ return false;
                 
                 <tr>
                     <td class="auto-style7">
-                        URL of Add if any </td>
+                        URL of Advertisement  </td>
                     <td class="auto-style5">
                         <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
                     </td>
-                    <td>
-                        <br />
-                    </td>
+                 
                 </tr>
-    <tr>
-<td>
-    <asp:FileUpload ID="fileuploadimages" runat="server" />
-    </td>
-        </tr>
+                
                 <tr>
                     <td>
     <asp:Button ID="btnSubmit" runat="server" Text="Submit" onclick="btnSubmit_Click" />

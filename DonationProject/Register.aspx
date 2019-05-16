@@ -73,7 +73,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text="UserName:" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="UserName:" Font-Bold="True" Width="100px" ForeColor="#FF3300"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txt_UserName" runat="server" Width="150px"></asp:TextBox>
@@ -84,7 +84,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="Password:" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="Password:" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txt_Password" TextMode="Password" runat="server"
@@ -96,7 +96,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label6" runat="server" Text="Email" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label6" runat="server" Text="Email" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="email" runat="server"
@@ -109,7 +109,7 @@
                
                 <tr>
                     <td>
-                        <asp:Label ID="Label3" runat="server" Text="Role:" Font-Bold="True" Width="100px" Height="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text="Role:" Font-Bold="True" Width="100px" Height="100px" ForeColor="#FF3300"></asp:Label>
                     </td>
                     <td>
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server">
@@ -124,14 +124,14 @@
 
                 <tr>
                     <td>
-                        <asp:Label ID="Label7" runat="server" Text="date-of-birth" Style="display: none" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label7" runat="server" Text="Date-of-birth" Style="display: none" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtDtOfBirth" runat="server" Style="display: none" Width="150px"></asp:TextBox>
 
                     </td>
                     <td>
-                        <asp:Label ID="Label8" runat="server" Text="Age" Style="display: none" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label8" runat="server" Text="Age" Style="display: none" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtAge" runat="server" Style="display: none" Width="60" ></asp:TextBox>
@@ -143,7 +143,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label4" runat="server" Text="SchoolEmail" Font-Bold="True" Width="100px" Style="display: none" BackColor="#FFFF66" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="SchoolEmail" Font-Bold="True" Width="100px" Style="display: none"  ForeColor="#FF3300"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="matternumb" runat="server" Style="display: none"></asp:TextBox>
@@ -155,7 +155,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Text="childEmail" Font-Bold="True" Width="100px" BackColor="#FFFF66" ForeColor="#FF3300" Style="display: none"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text="ChildEmail" Font-Bold="True" Width="100px"  ForeColor="#FF3300" Style="display: none"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="TextBox4" runat="server" Width="150px" Style="display: none"></asp:TextBox>

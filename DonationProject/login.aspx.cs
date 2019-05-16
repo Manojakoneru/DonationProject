@@ -48,13 +48,10 @@ namespace DonationProject
         protected void btn_login_Click(object sender, EventArgs e)
 
         {
-
             SqlConnection con = new SqlConnection(strConnString);
             SqlConnection con1 = new SqlConnection(strConnString);
-
             con.Open();
             con1.Open();
-
             str = "Select * from childTable";
             str2 = "Select * from ParentTable";
 
@@ -121,7 +118,7 @@ namespace DonationProject
              else if (TextBox_user_name.Text == "Admin")
                 {
                     Session["Admin"] = UserName;
-                    Response.Redirect("admin.aspx");
+                    Response.Redirect("WebForm5.aspx");
                 }
                 else
 
