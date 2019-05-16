@@ -114,7 +114,7 @@ namespace DonationProject
 
                 {
 
-                    Session["userName"] = UserName;
+                    Session["userName"] = u;
 
                     Response.Redirect("ParentMasterPage.aspx");
                 }

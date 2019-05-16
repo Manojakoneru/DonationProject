@@ -73,6 +73,7 @@
     <Content Include="Ads\Images\Barbie-fun-printed-pop-tarts.jpg" />
     <Content Include="Ads\Images\mcdonaldshappymealegg_0.jpg" />
     <Content Include="error.aspx" />
+    <Content Include="Gamesplayed.aspx" />
     <Content Include="Games\Game3\.gitignore" />
     <Content Include="Games\Game3\favicon.png" />
     <Content Include="Games\Game3\game.min.js" />
@@ -439,6 +440,13 @@
     </Compile>
     <Compile Include="error.aspx.designer.cs">
       <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gamesplayed.aspx.cs">
+      <DependentUpon>Gamesplayed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gamesplayed.aspx.designer.cs">
+      <DependentUpon>Gamesplayed.aspx</DependentUpon>
     </Compile>
     <Compile Include="Games\Game2\hextris.aspx.cs">
       <DependentUpon>hextris.aspx</DependentUpon>
