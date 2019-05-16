@@ -118,11 +118,11 @@ namespace DonationProject
 
                     Response.Redirect("ParentMasterPage.aspx");
                 }
-             /*   else if (TextBox_user_name.Text == "Admin")
+             else if (TextBox_user_name.Text == "Admin")
                 {
                     Session["Admin"] = UserName;
                     Response.Redirect("admin.aspx");
-                }*/
+                }
                 else
 
                 {
