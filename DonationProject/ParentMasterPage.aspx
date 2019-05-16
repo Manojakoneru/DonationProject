@@ -9,7 +9,7 @@
       <a href="#home">Home</a>
           </td>      
         <td  style="width:15%">
-      <a href="#news">Games Played</a>      
+      <a href="Gamesplayed.aspx">Games Played</a>      
            </td>
         <td  style="width:15%">
       <a href="LeaderBoard.aspx">Leader Board</a>
