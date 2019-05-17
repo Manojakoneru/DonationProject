@@ -51,9 +51,7 @@
         </tr>
         </table>
     </div>
-     <div>
-        <img src="game1.PNG" href="Games/Game1/index.html" />
-    </div>
+
 </asp:Content>
 
 

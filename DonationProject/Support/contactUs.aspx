@@ -40,38 +40,6 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style6">Your Name:</td>
-                <td class="auto-style7">
-                    <asp:TextBox ID="yourname" runat="server" Width="170px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="yourname" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style8">Email</td>
-                <td class="auto-style9">
-                    <asp:TextBox ID="email" runat="server" TextMode="Email" Width="170px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="email" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">Subject</td>
-                <td>
-                    <asp:TextBox ID="Subject" runat="server" Width="170px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Subject" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style10">Feedback</td>
-                <td class="auto-style11">
-                    <asp:TextBox ID="Feedback" runat="server" Height="117px" TextMode="MultiLine" Width="319px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="Feedback" ErrorMessage="This field is required" ForeColor="Red"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-        </table>
-        <asp:Button ID="Button1" runat="server" CssClass="auto-style5" Text="Submit" />
-    </form>
+
 </body>
 </html>
