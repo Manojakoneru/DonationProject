@@ -94,7 +94,7 @@ namespace DonationProject
                     }
                  else
 
-                        lb1.Text = "Sorry, your age is not verified at";
+                        lb1.Text = "Sorry, your account is not verified at";
                 }
 
             }
@@ -120,7 +120,7 @@ namespace DonationProject
                     Session["Admin"] = UserName;
                     Response.Redirect("WebForm5.aspx");
                 }
-                else
+                else if (lb1.Text != "Sorry, your account is not verified at")
 
                 {
 

@@ -37,7 +37,7 @@ namespace DonationProject
                 TextBox4.Text = "";
 
                 TextBox1.Focus();
-                lblmsg.Text = "Successfully submitted. Thank you for submitting!!!";
+                lblmsg.Text = "Successfully submitted. Thank you for donating!!!";
 
                // Response.Redirect("~/MainPage.aspx");
 
