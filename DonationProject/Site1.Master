@@ -41,7 +41,7 @@
             </table>
            
         </div>
-        <div>
+      <%--  <div>
 
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
@@ -55,12 +55,12 @@
 
             </Triggers>
 
-            <ContentTemplate>
+        <!--    <ContentTemplate>
 
                  <asp:AdRotator BorderWidth="1" ID="MyAds" runat="server" Target="_blank" Width="400px" Height="246px" Style="text-align: center" DataSourceID="adsOnWebsite" />  
                         <asp:XmlDataSource ID="adsOnWebsite" runat="server"  DataFile="~/advertisements.xml"></asp:XmlDataSource>  
 
-            </ContentTemplate>
+            </ContentTemplate>--%>
 
         </asp:UpdatePanel>
 

@@ -68,7 +68,7 @@
             <table align="center">
                 <tr>
                     <td colspan="2">
-                        <h3>Registration using Role</h3>
+                        <h3>Registration</h3>
                     </td>
                 </tr>
                 <tr>

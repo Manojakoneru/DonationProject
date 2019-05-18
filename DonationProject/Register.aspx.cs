@@ -83,13 +83,9 @@ namespace DonationProject
                     client.EnableSsl = true;                    
                     client.Send(mail);
                    
-
+          
                 }
-                else
-                {
-                    Response.Redirect("/Support/donateByAmount.aspx");
-
-                }
+    
                 com.Parameters.AddWithValue("@status", 0);
 
                 Console.WriteLine("from child");
@@ -99,14 +95,14 @@ namespace DonationProject
                 }
                 com.ExecuteNonQuery();
                 con.Close();
-                //if (txtAge.Text !=" 18")
-                //{
-                //    Response.Redirect("paymentpage.aspx");
-                //}
+                if (Int32.Parse(txtAge.Text) >= 18)
+                {
+                    Response.Redirect("paymentpage.aspx");
+                }
 
                 //else
-                  
-                lblmsg.Text = "Successfully Registered!!!";
+
+                lblmsg.Text = "Successfully Registered!!! Admin will verify your age soon";
 
                 clear();
 
