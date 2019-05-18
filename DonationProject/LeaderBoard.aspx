@@ -77,11 +77,11 @@
         <div>
             <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static">Score Board</asp:Label>
             <br />
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="username" DataSourceID="techgamesDataSource" ClientIDMode="Static">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="techgamesDataSource" ClientIDMode="Static">
                 <Columns>
-                    <asp:BoundField DataField="username" HeaderText="Username" ReadOnly="True" SortExpression="username" />
-                    <asp:BoundField DataField="game" HeaderText="Game" SortExpression="game" />
-                    <asp:BoundField DataField="highscore" HeaderText="High Score" SortExpression="highscore" />
+                    <asp:BoundField DataField="PLAYER" HeaderText="PLAYER" />
+                    <asp:BoundField DataField="GAME" HeaderText="GAME" />
+                    <asp:BoundField DataField="HIGHSCORE" HeaderText="HIGHSCORE" />
                 </Columns>
                 <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                 <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -94,6 +94,6 @@
                 <SortedDescendingHeaderStyle BackColor="#93451F" />
             </asp:GridView>
         </div>
-        <asp:SqlDataSource ID="techgamesDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:TestDBConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT [username], [game], [highscore] FROM [scoreboard]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="techgamesDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:TestDBConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT UPPER(username) AS PLAYER, UPPER(game) AS GAME, MAX(highscore) AS HIGHSCORE FROM scoreboard GROUP BY username, game ORDER BY highscore DESC"></asp:SqlDataSource>
     
 </asp:Content>
