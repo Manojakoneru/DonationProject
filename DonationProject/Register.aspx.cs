@@ -95,7 +95,7 @@ namespace DonationProject
                 }
                 com.ExecuteNonQuery();
                 con.Close();
-                if (txtAge.Text !=" 18")
+                if (Int32.Parse(txtAge.Text) >= 18)
                 {
                     Response.Redirect("paymentpage.aspx");
                 }

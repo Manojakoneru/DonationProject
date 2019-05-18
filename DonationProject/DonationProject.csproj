@@ -72,6 +72,7 @@
     <Content Include="Ads\Images\3072313446_7b814f345e_b_wide.jpg" />
     <Content Include="Ads\Images\Barbie-fun-printed-pop-tarts.jpg" />
     <Content Include="Ads\Images\mcdonaldshappymealegg_0.jpg" />
+    <Content Include="counterstrike.jpg" />
     <Content Include="error.aspx" />
     <Content Include="game1.PNG" />
     <Content Include="game2.PNG" />
@@ -393,6 +394,7 @@
     <Content Include="Games\Game4\res\ios\icon-small%402x.png" />
     <Content Include="Games\Game4\res\ios\icon-small.png" />
     <Content Include="Games\Game4\res\ios\icon.png" />
+    <Content Include="image2.jpg" />
     <Content Include="LeaderBoard.aspx" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />

@@ -21,7 +21,7 @@
         </div>
       </div>       
               </td> 
-          <td  style="width:15%"><a href="/Support/contactUs.aspx">Contact Us</a></td>
+          <td  style="width:15%"><a href="/Support/contactUs.aspx">About Us</a></td>
           </tr>
         </table>
     </div>
