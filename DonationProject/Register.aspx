@@ -1,6 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="Register.aspx.cs" Inherits="DonationProject.WebForm3" %>
-
-<script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="Register.aspx.cs" Inherits="DonationProject.WebForm3" %>--%>
+<%@ Page Title="TechGames" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="DonationProject.WebForm3" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $("#RadioButtonList1").click(function () {
@@ -56,24 +57,54 @@
         return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
 </script>
+</asp:Content>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<asp:Content ID="Content3" ContentPlaceHolderID="MainPageContentPlaceHolder" runat="server">
+    <div class="navbar">
+        <table style="width:100%; height: 100%">
+      <tr>
+
+      <td style="width:15%"><a href="/Mainpage.aspx">Home</a></td>
+     <td  style="width:15%"><a href="/Register.aspx">Signup</a></td>
+     <td  style="width:15%"><a href="/login.aspx">Signin</a></td>
+              
+
+          <td  style="width:15%">
+      <div class="dropdown">
+        <button class="dropbtn">Support 
+        </button>
+        <div class="dropdown-content">
+          <a href="/Support/donateByGame.aspx">Donate A Game</a>
+          <a href="/Support/donateByAmount.aspx">Donate Funds</a>
+          <a href="/Support/adSubmitPage.aspx">Post AD</a>         
+        </div>
+      </div>       
+              </td> 
+          <td  style="width:15%"><a href="/Support/contactUs.aspx">Contact Us</a></td>
+          </tr>
+
+        </table>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 <head runat="server">
     <title>Register</title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">--%>
         <div>
             <table align="center">
                 <tr>
                     <td colspan="2">
-                        <h3>Registration</h3>
+                        <h3>Registration using Role</h3>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text="UserName:" Font-Bold="True" Width="100px" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Username " Font-Bold="True" Width="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txt_UserName" runat="server" Width="150px"></asp:TextBox>
@@ -84,7 +115,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="Password:" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="Password " Font-Bold="True" Width="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txt_Password" TextMode="Password" runat="server"
@@ -96,7 +127,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label6" runat="server" Text="Email" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label6" runat="server" Text="Email " Font-Bold="True" Width="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="email" runat="server"
@@ -109,7 +140,7 @@
                
                 <tr>
                     <td>
-                        <asp:Label ID="Label3" runat="server" Text="Role:" Font-Bold="True" Width="100px" Height="100px" ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text="Role " Font-Bold="True" Width="100px" Height="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server">
@@ -124,14 +155,14 @@
 
                 <tr>
                     <td>
-                        <asp:Label ID="Label7" runat="server" Text="Date-of-birth" Style="display: none" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label7" runat="server" Text="Date of Birth " Style="display: none" Font-Bold="True" Width="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtDtOfBirth" runat="server" Style="display: none" Width="150px"></asp:TextBox>
 
                     </td>
                     <td>
-                        <asp:Label ID="Label8" runat="server" Text="Age" Style="display: none" Font-Bold="True" Width="100px"  ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label8" runat="server" Text="Age " Style="display: none" Font-Bold="True" Width="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtAge" runat="server" Style="display: none" Width="60" ></asp:TextBox>
@@ -143,7 +174,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label4" runat="server" Text="SchoolEmail" Font-Bold="True" Width="100px" Style="display: none"  ForeColor="#FF3300"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="School Email " Font-Bold="True" Width="100px" Style="display: none" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="matternumb" runat="server" Style="display: none"></asp:TextBox>
@@ -155,7 +186,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Text="ChildEmail" Font-Bold="True" Width="100px"  ForeColor="#FF3300" Style="display: none"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text="Child Email " Font-Bold="True" Width="100px" BackColor="" ForeColor="" Style="display: none"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="TextBox4" runat="server" Width="150px" Style="display: none"></asp:TextBox>
@@ -171,7 +202,7 @@
 
                     <td>
 
-                        <asp:Button ID="btn_register" runat="server" BackColor="#CCFF99" Text="Register"
+                        <asp:Button ID="btn_register" runat="server" BackColor="" Text="Register"
                             OnClick="btn_register_Click" />
 
 
@@ -204,9 +235,10 @@
 
         </div>
 
-    </form>
+<%--    </form>
 
 </body>
 
-</html>
+</html>--%>
 
+  </asp:Content>

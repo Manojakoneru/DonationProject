@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainPageContentPlaceHolder" runat="server">
      <div class="navbar">
          <table style="width:100%; height: 100%">
       <tr>
@@ -37,7 +37,7 @@
       </div>  
         </td>
         <td  style="width:15%">
-      <a href="#news">Contact Us</a>    
+      <a href="#">Contact Us</a>    
            </td>
           <td  style="width:15%">
       <a href="logout.aspx">Logout</a>

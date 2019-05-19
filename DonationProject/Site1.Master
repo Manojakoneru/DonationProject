@@ -50,6 +50,14 @@
                 <tr style="height: 100px;">
                     <td class="auto-style1">Top Tech Games</td>
                 </tr>
+
+                <tr style="height: 40px;" >
+                    <td>
+                         <asp:ContentPlaceHolder ID="MainPageContentPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+
                 <tr style="height: auto; vertical-align: top">
                     <td class="auto-style3">
                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -64,13 +72,13 @@
             </table>
            
         </div>
-        <div>
+        <div style="width: 100px; height: 100px">
 
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
         <asp:Timer ID="Timer1" Interval="1000" runat="server" />
 
-        <asp:UpdatePanel ID="up1" runat="server">
+        <asp:UpdatePanel ID="up1" runat="server"  style="width: 100px; height: 100px">
 
             <Triggers>
 
@@ -80,7 +88,7 @@
 
             <ContentTemplate>
 
-                 <asp:AdRotator BorderWidth="1" ID="MyAds" runat="server" Target="_blank" Width="400px" Height="246px" Style="text-align: center" DataSourceID="adsOnWebsite" />  
+                 <asp:AdRotator BorderWidth="1" ID="MyAds" runat="server" Target="_blank" Width="120px" Height="120px" Style="text-align: center" DataSourceID="adsOnWebsite" />  
                         <asp:XmlDataSource ID="adsOnWebsite" runat="server"  DataFile="~/advertisements.xml"></asp:XmlDataSource>  
 
             </ContentTemplate>
