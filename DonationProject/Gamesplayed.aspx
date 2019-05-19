@@ -15,16 +15,20 @@
         }
         #Label1{
             font-size:xx-large;
-            font-style:italic;
+           
             position:relative;
             color:blue;
             margin-left:400px;
             margin-top:300px;
             font-weight:bold;
          }
-        #GridView1{
+        #GridView2{
             margin-left:400px;
             margin-top:30px;
+        }
+        #Label2{
+            font-size:xx-large;
+            font-weight:bold;
         }
     </style>
 </asp:Content>
@@ -66,7 +70,8 @@
         </table>
     </div><!--end of nav bar-->
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static">Child Info </asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static">Child Info :</asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2"  DataSourceID="techgamesDataSource" ClientIDMode="Static" CaptionAlign="Top" Height="16px" Width="123px">
                 <Columns> 
                     <asp:BoundField DataField="game" HeaderText="game" SortExpression="game" />
