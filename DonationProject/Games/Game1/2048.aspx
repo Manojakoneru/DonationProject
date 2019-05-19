@@ -88,8 +88,7 @@
             var allCookieArray = document.cookie.split(';');
             var tempScore = allCookieArray[0].split("=");
             document.getElementById('<%=score.ClientID %>').value = tempScore[1];
-            alert(tempScore[1]);
-          }
+           }
          </script>
 </asp:Content>
 
