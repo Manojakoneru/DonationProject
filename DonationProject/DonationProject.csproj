@@ -418,6 +418,7 @@
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="paymentpage.aspx" />
+    <Content Include="Rating.aspx" />
     <Content Include="sprites.png" />
     <Content Include="success.aspx" />
     <Content Include="Support\contactUs.aspx" />
@@ -528,6 +529,13 @@
     </Compile>
     <Compile Include="paymentpage.aspx.designer.cs">
       <DependentUpon>paymentpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rating.aspx.cs">
+      <DependentUpon>Rating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rating.aspx.designer.cs">
+      <DependentUpon>Rating.aspx</DependentUpon>
     </Compile>
     <Compile Include="success.aspx.cs">
       <DependentUpon>success.aspx</DependentUpon>

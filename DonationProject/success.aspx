@@ -67,5 +67,6 @@
     </div><!--end of nav bar-->
     <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static"></asp:Label><br />
     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ChildMasterPage.aspx" ClientIDMode="Static">Play Again to achieve high score!!</asp:HyperLink>
+    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="Rating.aspx" ClientIDMode="Static">Click here for rating</asp:HyperLink>
    
     </asp:Content>

@@ -40,7 +40,7 @@
                   <div class="dropdown">
                       <button class="dropbtn">Games</button>
                         <div class="dropdown-content">
-          <a href="Games/Game1/2048.aspx">2048</a>
+          <a href="Games/Game1/index.html">Shooting</a>
           <a href="Games/Game2/hextris.aspx">Hextris</a>
           <a href="Games/Game3/rogers.aspx">Captain Rogers</a>
           <a href="Games/Game4/Game4.aspx">Green Mahjong</a>
@@ -95,5 +95,28 @@
             </asp:GridView>
         </div>
         <asp:SqlDataSource ID="techgamesDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:TestDBConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT UPPER(username) AS PLAYER, UPPER(game) AS GAME, MAX(highscore) AS HIGHSCORE FROM scoreboard GROUP BY username, game ORDER BY highscore DESC"></asp:SqlDataSource>
+ 
     
+       <div>
+            <asp:Label ID="Label2" runat="server" Text="Label" ClientIDMode="Static">Top Rated Games</asp:Label>
+            <br />
+           <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource1" ClientIDMode="Static">
+                <Columns>
+
+                    <asp:BoundField DataField="GAME" HeaderText="GAME" />
+                    <asp:BoundField DataField="HIGHRATED" HeaderText="HIGHRATED" />
+                </Columns>
+                <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                <SortedDescendingHeaderStyle BackColor="#93451F" />
+            </asp:GridView>
+        </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TestDBConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT UPPER(game_name) AS GAME, MAX(rating) AS HIGHRATED FROM rating GROUP BY game_name ORDER BY HIGHRATED DESC"></asp:SqlDataSource>
+   
 </asp:Content>
