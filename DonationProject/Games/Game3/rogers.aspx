@@ -77,7 +77,7 @@
         function populateScore() {
            
             var highscore = window.localStorage.getItem('rogers-highscore');
-            alert(highscore);
+            
             if (highscore == 0)
                 alert("Continue to play the game or select another game to play!!");
             document.getElementById('<%=g3_highscore.ClientID %>').value = highscore;
