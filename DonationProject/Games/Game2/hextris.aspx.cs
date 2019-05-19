@@ -40,7 +40,7 @@ namespace DonationProject.Games.Game2
             }
             // com1.ExecuteNonQuery();
             con1.Close();
-            if (exis_HighScore > 0 && exis_HighScore >=Convert.ToInt32(g2_highscore.Text))
+            if (g2_highscore.Text!="undefined" && exis_HighScore >=Convert.ToInt32(g2_highscore.Text))
             {
                 //existing data has already a winner don't dont insert and skip;
                 // Console.SetOut("Entry not inserted");
@@ -49,7 +49,7 @@ namespace DonationProject.Games.Game2
                 Session["message"] = Label1.Text;
                 Response.Redirect("../../success.aspx");
             }
-            else
+            else if(g2_highscore.Text != "undefined")
             {
                 // Response.Write("Game completed");
                 SqlCommand com;

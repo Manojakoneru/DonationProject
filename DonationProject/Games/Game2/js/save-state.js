@@ -53,7 +53,8 @@ function writeHighScores() {
 	highscores = highscores.slice(0,3);
     localStorage.setItem("highscores", JSON.stringify(highscores));
     //alert(highscores[0]);
-    document.cookie = "hextris" + "=" + highscores[0];
+    if (highscores[0]!=undefined)
+      document.cookie = "hextris" + "=" + highscores[0];
     //alert("3");
 }
 

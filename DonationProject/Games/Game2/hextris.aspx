@@ -29,7 +29,7 @@
          <div class="dropdown">
                       <button class="dropbtn">Games</button>
                         <div class="dropdown-content">
-          <a href="../Game1/index.html">Shooting</a>
+          <a href="../Game1/2048.aspx">2048</a>
           <a href="#">Hextris</a>
           <a href="../Game3/rogers.aspx">Captain Rogers</a>
           <a href="../Game4/Game4.aspx">Green Mahjong</a>
@@ -60,7 +60,7 @@
         </table>
     </div><!--end of nav bar-->
     <div>
-        <iframe src="index.html" border="0" frameborder="0" height="600" width="600" id="frame1"></iframe>
+        <iframe src="index.html"  frameborder="0" height="600" width="600" id="frame1"></iframe>
         <div class="auto-style3">
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="End game" ClientIDMode="Static" OnClientClick="populateScore()"/>
             <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static"></asp:Label>
@@ -83,19 +83,19 @@
     </div>
     <script type="text/javascript">
       
-         function populateScore(){
-           
-           //  alert(document.cookie);
+        function populateScore() {
              var name = "hextris" + "=";
-             var highScore = null;
+             var highScore =0;
              var allCookieArray = document.cookie.split(';');
              for (var i=0; i<allCookieArray.length; i++) {
                  var temp = allCookieArray[i].trim();
                 if (temp.indexOf(name)==0)
                  highScore=temp.substring(name.length,temp.length);
              }
-               document.getElementById('<%=g2_highscore.ClientID %>').value = highScore;
-           //  });
+              
+             document.getElementById('<%=g2_highscore.ClientID %>').value = highScore;
+             //document.cookie = "hextris" + "=" + 0;
+            
          }
          </script>
 </asp:Content>

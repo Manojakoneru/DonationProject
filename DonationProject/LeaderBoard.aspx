@@ -40,7 +40,7 @@
                   <div class="dropdown">
                       <button class="dropbtn">Games</button>
                         <div class="dropdown-content">
-          <a href="Games/Game1/index.html">Shooting</a>
+          <a href="Games/Game1/2048.aspx">2048</a>
           <a href="Games/Game2/hextris.aspx">Hextris</a>
           <a href="Games/Game3/rogers.aspx">Captain Rogers</a>
           <a href="Games/Game4/Game4.aspx">Green Mahjong</a>

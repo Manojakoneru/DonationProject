@@ -8,9 +8,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace DonationProject.Games.Game3
+namespace DonationProject.Games.Game1
 {
-    public partial class rogers : System.Web.UI.Page
+    public partial class _2048 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,17 +19,16 @@ namespace DonationProject.Games.Game3
         string strConnString = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //Response.Write("Game completed");
-            int exis_HighScore=0;
+            int exis_HighScore = 0;
             string exis_winnner = "";
-            Boolean newScrFlag = false, userExists = false;
+            Boolean newScrFlag = false, userExists = false ;
             System.Data.SqlClient.SqlCommand com1;
             SqlConnection con1 = new SqlConnection(strConnString);
             com1 = new SqlCommand();
             com1.Connection = con1;
             com1.CommandType = CommandType.Text;
             com1.CommandText = "select username,game,highscore from scoreboard where game =@game and username=@username";
-            com1.Parameters.AddWithValue("@game", "rogers");
+            com1.Parameters.AddWithValue("@game", "2048Tile");
             com1.Parameters.AddWithValue("@username", Session["userName"]);
             if (con1.State == ConnectionState.Closed)
             {
@@ -39,11 +38,10 @@ namespace DonationProject.Games.Game3
                 {
                     exis_HighScore = objReader.GetInt32(objReader.GetOrdinal("highscore"));
                     exis_winnner = objReader.GetString(objReader.GetOrdinal("username"));
-                    if (exis_HighScore < Convert.ToInt32(g3_highscore.Text))
+                    if (exis_HighScore < Convert.ToInt32(score.Text))
                     {
                         newScrFlag = true;
-                    }
-                    else if (exis_winnner.Equals(Session["userName"]))
+                    }else if (exis_winnner.Equals(Session["userName"]))
                     {
                         userExists = true;
                     }
@@ -51,19 +49,23 @@ namespace DonationProject.Games.Game3
                     Debug.WriteLine("*********************");
                 }
             }
-           // com1.ExecuteNonQuery();
-             con1.Close();
+            // com1.ExecuteNonQuery();
+            con1.Close();
+            //new high score for the current user needs to be updated
+
             if (newScrFlag)
             {
-                Debug.WriteLine("Entry updated");
-                SqlCommand com;
+                    //existing data has already a winner don't dont insert and skip;
+                    // Console.SetOut("Entry updated");
+                 Debug.WriteLine("Entry updated");
+                 SqlCommand com;
                 SqlConnection con = new SqlConnection(strConnString);
                 com = new SqlCommand();
                 com.Connection = con;
                 com.CommandType = CommandType.Text;
-                com.CommandText = "update scoreboard set highscore='" + Convert.ToInt32(g3_highscore.Text) + "' where  username='" + Session["userName"] + "' AND game='rogers'";
+                com.CommandText = "update scoreboard set highscore='" + Convert.ToInt32(score.Text) + "' where  username='" +Session["userName"]+ "' AND game='2048Tile'" ;
                 com.Parameters.Clear();
-
+                  
                 if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
@@ -74,11 +76,12 @@ namespace DonationProject.Games.Game3
                 Session["message"] = Label1.Text;
                 Response.Redirect("../../success.aspx");
             }
-             else if (!userExists && !newScrFlag)
+            else if(!userExists && !newScrFlag)
             {
-                Debug.WriteLine(exis_HighScore+"##############" + Convert.ToInt32(g3_highscore.Text));
-                //Console.SetOut("New High score is recorded for Rogers");
-                System.Data.SqlClient.SqlCommand com;
+                    // Console.SetOut("Entry Inserted");
+                    Debug.WriteLine("Entry Inserted");
+                    // Response.Write("Game completed");
+                    SqlCommand com;
                 SqlConnection con = new SqlConnection(strConnString);
                 com = new SqlCommand();
                 com.Connection = con;
@@ -87,8 +90,8 @@ namespace DonationProject.Games.Game3
                 com.Parameters.Clear();
                 Random r = new Random();
                 com.Parameters.AddWithValue("@username", Session["userName"]);
-                com.Parameters.AddWithValue("@game", "rogers");
-                com.Parameters.AddWithValue("@highscore", Convert.ToInt32(g3_highscore.Text));
+                com.Parameters.AddWithValue("@game", "2048Tile");
+                com.Parameters.AddWithValue("@highscore", Convert.ToInt32(score.Text));
                 com.Parameters.AddWithValue("@Id", r.Next() % 1000);
                 if (con.State == ConnectionState.Closed)
                 {
@@ -99,6 +102,7 @@ namespace DonationProject.Games.Game3
                 Label1.Text = "Congratulations!!!!<br/>You got a high score";
                 Session["message"] = Label1.Text;
                 Response.Redirect("../../success.aspx");
+                //clear();
             }
             else
             {
@@ -106,7 +110,6 @@ namespace DonationProject.Games.Game3
                 Session["message"] = Label1.Text;
                 Response.Redirect("../../success.aspx");
             }
-            
         }
     }
 }
