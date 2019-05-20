@@ -13,14 +13,18 @@
             position:relative;
             float:right; 
         }
-        
+          #Button1{
+              margin-top:-600px;
+              margin-left:200px;
+              float:right;
+          }
     </style>
      
     <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
    
      
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainPageContentPlaceHolder" runat="server">
     <div class="navbar">
         <table style="width:100%; height: 100%">
       <tr>
@@ -59,7 +63,7 @@
 
         </table>
     </div><!--end of nav bar-->
-    <div>
+    <div style="float:right;position:relative">
         <iframe src="index.html"  frameborder="0" height="600" width="600" id="frame1"></iframe>
         <div class="auto-style3">
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="End game" ClientIDMode="Static" OnClientClick="populateScore()"/>

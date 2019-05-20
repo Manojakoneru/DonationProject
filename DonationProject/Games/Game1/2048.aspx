@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site1.Master" CodeBehind="2048.aspx.cs" Inherits="DonationProject.Games.Game1._2048" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        #g2_highscore{
+        #score{
             display:none;
         }
         #Label1{
@@ -14,17 +14,21 @@
             float:right; 
         }
         #frame1{
-            margin-left:300px;
+            
             margin-top:50px;
         }
-        
+        #Button1{
+              margin-top:-600px;
+              margin-left:300px;
+              float:right;
+          }
     </style>
      
     <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
    
      
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainPageContentPlaceHolder" runat="server">
     <div class="navbar">
         <table style="width:100%; height: 100%">
       <tr>
@@ -63,7 +67,7 @@
 
         </table>
     </div><!--end of nav bar-->
-    <div>
+    <div style="float:right;position:relative">
          <iframe src="index.html" frameborder="0" height="700"  id="frame1"></iframe>
 
         <div class="auto-style3">
