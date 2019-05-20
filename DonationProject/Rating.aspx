@@ -78,7 +78,7 @@
         <asp:ListItem Value="Green_Mahjong" Text="Green_Mahjong"> </asp:ListItem>
         <%--<asp:ListItem Value="Dice" Text="Dice"> </asp:ListItem>--%>
         <asp:ListItem Value="Captain_Rogers" Text="Captain_Rogers"> </asp:ListItem>
-        <asp:ListItem Value="Shooting" Text="SHooting"> </asp:ListItem>
+        <asp:ListItem Value="SHooting" Text="2048"> </asp:ListItem>
                          </asp:DropDownList>
                     </td>
                         <td>
