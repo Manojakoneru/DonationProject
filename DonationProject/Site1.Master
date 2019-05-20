@@ -81,9 +81,9 @@
             <tr style="height: 30px; bottom: 0; background-color: #b50000; position: fixed; width: 98.5%">
                     <td class="auto-style2"><span class="auto-style21">Copyright &copy; 2019 Group4</span>
                         Connect us on <span style="margin-top: 2px;"><a target="_blank" href="https://www.facebook.com/">
-                            <img class="auto-style6" src="~/facebook_icon.png"></a></span>
-                        <span style="margin-top: 2px;"><a target="_blank" href="https://www.instagram.com/"><img class="auto-style5" src="~/icon1.png"></a></span>
-                        <span style="margin-top: 2px;"><a target="_blank" href="https://www.twitter.com/"><img class="auto-style4" src="~/icon2.png"></a></span></td>
+                            <img class="auto-style6" src="fb.png"></a></span>
+                        <span style="margin-top: 2px;"><a target="_blank" href="https://www.instagram.com/"><img class="auto-style5" src="insta.png"></a></span>
+                        <span style="margin-top: 2px;"><a target="_blank" href="https://www.twitter.com/"><img class="auto-style4" src="twitt.png"></a></span></td>
                     
                 </tr>
             </table>

@@ -74,6 +74,7 @@
     <Content Include="Ads\Images\mcdonaldshappymealegg_0.jpg" />
     <Content Include="counterstrike.jpg" />
     <Content Include="error.aspx" />
+    <Content Include="fb.png" />
     <Content Include="game1.PNG" />
     <Content Include="game2.PNG" />
     <Content Include="game3.PNG" />
@@ -414,6 +415,7 @@
     <Content Include="Games\Game4\res\ios\icon-small.png" />
     <Content Include="Games\Game4\res\ios\icon.png" />
     <Content Include="image2.jpg" />
+    <Content Include="insta.png" />
     <Content Include="LeaderBoard.aspx" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
@@ -428,6 +430,7 @@
     <Content Include="Ads\Images\Statechart-diagram-for-Admin.png" />
     <Content Include="StyleSheet.css" />
     <Content Include="Support\donateByGame.aspx" />
+    <Content Include="twitt.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
