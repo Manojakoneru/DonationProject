@@ -37,14 +37,14 @@
           <a href="#">Hextris</a>
           <a href="../Game3/rogers.aspx">Captain Rogers</a>
           <a href="../Game4/Game4.aspx">Green Mahjong</a>
-          <a href="../Game5/index.html">Dice</a>
+          <%--<a href="../Game5/index.html">Dice</a>--%>
         </div>
                   </div>
           </td>
           <td  style="width:15%">
             <a href="../../LeaderBoard.aspx">Leader Board</a>
               </td>        
-          <td  style="width:15%">
+          <%--<td  style="width:15%">
       <div class="dropdown">
         <button class="dropbtn">Support 
         </button>
@@ -55,10 +55,13 @@
         </div>
       </div>       
               </td> 
-          <td  style="width:15%"><a href="/Support/contactUs.aspx">Contact Us</a></td>
+          <td  style="width:15%"><a href="/Support/contactUs.aspx">Contact Us</a></td>--%>
           <td  style="width:15%">
       <a href="./../../logout.aspx">Logout</a>
             </td>
+          <td>
+    <asp:Label ID="lb1" runat="server" Text="Label"></asp:Label>
+    </td>
           </tr>
 
         </table>

@@ -14,7 +14,7 @@ namespace DonationProject.Games.Game1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lb1.Text = "<b><font color=white>" + "Welcome:: " + "</font>" + "<b><font color=white>" + Session["UserName"] + "</font>";
         }
         string strConnString = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
         protected void Button1_Click(object sender, EventArgs e)

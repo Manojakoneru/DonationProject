@@ -106,7 +106,7 @@
                     <td class="">
                         &nbsp;</td>
                     <td class="">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://github.com/Manojakoneru/myrepo">Donate</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" target="_blank" NavigateUrl="https://github.com/Manojakoneru/myrepo">Donate</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -132,7 +132,7 @@
                         &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
-                <%--<%--<tr>--%>
+                <%--<tr>
                     <td class="">&nbsp;</td>
                     <td class="">&nbsp;</td>
                     <td>&nbsp;</td>

@@ -95,10 +95,10 @@
 </head>
 <body>
     <form id="form1" runat="server">--%>
-        <div>
+        <div id="div1" runat="server">
             <table align="center">
                 <tr>
-                    <td colspan="2">
+                    <td colspan="3">
                         <h3>Registration using Role</h3>
                     </td>
                 </tr>
@@ -109,19 +109,19 @@
                     <td>
                         <asp:TextBox ID="txt_UserName" runat="server" Width="150px"></asp:TextBox>
                     </td>
-                    <td>
+                    <td colspan="2">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter UserName" ControlToValidate="txt_UserName"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td >
                         <asp:Label ID="Label2" runat="server" Text="Password " Font-Bold="True" Width="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txt_Password" TextMode="Password" runat="server"
                             Width="150px"></asp:TextBox>
                     </td>
-                    <td>
+                    <td colspan="2">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Password" ControlToValidate="txt_Password"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -133,7 +133,7 @@
                         <asp:TextBox ID="email" runat="server"
                             Width="150px"></asp:TextBox>
                     </td>
-                    <td>
+                    <td colspan="2">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter Email" ControlToValidate="email"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -143,12 +143,12 @@
                         <asp:Label ID="Label3" runat="server" Text="Role " Font-Bold="True" Width="100px" Height="100px" BackColor="" ForeColor=""></asp:Label>
                     </td>
                     <td>
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" onclick="GetRadioButtonValue();">
                             <asp:ListItem Value="1">children</asp:ListItem>
                             <asp:ListItem Value="2">Parent</asp:ListItem>
                         </asp:RadioButtonList>
                     </td>
-                    <td>
+                    <td colspan="2">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Select role" ControlToValidate="RadioButtonList1"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -176,7 +176,7 @@
                     <td>
                         <asp:Label ID="Label4" runat="server" Text="School Email " Font-Bold="True" Width="100px" Style="display: none" BackColor="" ForeColor=""></asp:Label>
                     </td>
-                    <td>
+                    <td colspan="3">
                         <asp:TextBox ID="matternumb" runat="server" Style="display: none"></asp:TextBox>
                     </td>
 
@@ -188,7 +188,7 @@
                     <td>
                         <asp:Label ID="Label5" runat="server" Text="Child Email " Font-Bold="True" Width="100px" BackColor="" ForeColor="" Style="display: none"></asp:Label>
                     </td>
-                    <td>
+                    <td colspan="3">
                         <asp:TextBox ID="TextBox4" runat="server" Width="150px" Style="display: none"></asp:TextBox>
 
                     </td>
@@ -219,7 +219,7 @@
 
                 <tr>
 
-                    <td align="center" colspan="2">
+                    <td align="center" colspan="4">
 
                         <asp:Label ID="lblmsg" runat="server"></asp:Label>
 
@@ -240,5 +240,67 @@
 </body>
 
 </html>--%>
+<script type="text/javascript">
+
+    function GetRadioButtonValue() {
+            //Access the radiobuttons in RadioButtonList control
+            var radioButtons = document.getElementsByName('<%= RadioButtonList1.UniqueID %>');
+            //loop through each controls
+            for (var x = 0; x < radioButtons.length; x++) {
+                //check if current items is seleccted
+                if (radioButtons[x].checked) {
+                    //check if the value selcted  is Country1
+                    if (radioButtons[x].value == '1') {
+                        //if so then display the textbox control
+                        document.getElementById('<%= Label7.ClientID %>').style.display = 'block';
+                        document.getElementById('<%= txtDtOfBirth.ClientID %>').style.display = 'block';
+                        document.getElementById('<%= Label8.ClientID %>').style.display = 'block';
+                        document.getElementById('<%= txtAge.ClientID %>').style.display = 'block';
+                        document.getElementById('<%= Label5.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= TextBox4.ClientID %>').style.display = 'none';
+                    }
+                    else if (radioButtons[x].value == '2') {
+                        //if not then hide the textbox control
+                        document.getElementById('<%= Label7.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= txtDtOfBirth.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= Label8.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= txtAge.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= Label4.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= matternumb.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= Label5.ClientID %>').style.display = 'block';
+                        document.getElementById('<%= TextBox4.ClientID %>').style.display = 'block';
+                    }
+                }
+            }
+    }
+
+
+    $(function () {
+        // When your textbox is changed (i.e. a date of birth is set)
+        $("#<%= txtDtOfBirth.ClientID %>").change(function () {
+            $("#<%= txtAge.ClientID %>").val(_calculateAge(new Date($(this).val())));
+            var Age = document.getElementById('<%= txtAge.ClientID %>').value;
+            var radioBtnVal = document.getElementsByName('<%= RadioButtonList1.UniqueID %>')[0].value;
+            
+            <%--document.getElementsByName('<%= RadioButtonList1.UniqueID %>').value;--%>
+
+                    if (Age > 18 && radioBtnVal == 1 ) {
+                        document.getElementById('<%= matternumb.ClientID %>').style.display = 'none';
+                        document.getElementById('<%= Label4.ClientID %>').style.display = 'none';
+                        //  $("#RequiredFieldValidator1").show();
+                    }
+                    else {
+                        document.getElementById('<%= matternumb.ClientID %>').style.display = 'block';
+                        document.getElementById('<%= Label4.ClientID %>').style.display = 'block';
+                    }
+        });
+    });
+    // Define a function to calculate age via a birthdate (http://stackoverflow.com/a/21984136/557445)
+    function _calculateAge(birthday) { // birthday is a date
+        var ageDifMs = Date.now() - birthday.getTime();
+        var ageDate = new Date(ageDifMs); // miliseconds from epoch
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+</script>
 
   </asp:Content>

@@ -157,8 +157,18 @@ namespace DonationProject
 
             }
 
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RadioButtonList1.SelectedValue == "1")
+            {
+                Console.Out.WriteLine("Child");
 
+            } else if (RadioButtonList1.SelectedValue == "2")
+            {
+                Console.Out.WriteLine("Parent");
+            }
 
+        }
     }
 
     }

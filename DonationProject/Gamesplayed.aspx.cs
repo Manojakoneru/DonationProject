@@ -15,7 +15,7 @@ namespace DonationProject
         string strConnString = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            lb1.Text = "<b><font color=white>" + Session["UserName"] + "</font>";
+            lb1.Text = "<b><font color=white>" + "Welcome:: " + "</font>" + "<b><font color=white>" + Session["UserName"] + "</font>";
 
             String childInfo="",childName="";
             System.Data.SqlClient.SqlCommand com1,com2;

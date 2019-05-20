@@ -32,7 +32,7 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainPageContentPlaceHolder" runat="server">
     <div class="navbar">
          <table style="width:100%; height: 100%">
       <tr>
@@ -43,10 +43,10 @@
         <a href="Gamesplayed.aspx">Games Played</a> 
 
               </td>
-        <td  style="width:15%">
+       <%-- <td  style="width:15%">
       <a href="LeaderBoard.aspx">Leader Board</a>
-            </td>
-        <td  style="width:15%">
+            </td>--%>
+       <%-- <td  style="width:15%">
       <div class="dropdown">
         <button class="dropbtn">Support 
         </button>
@@ -56,10 +56,10 @@
           <a href="/Support/adSubmitPage.aspx">Post AD</a>         
         </div> 
       </div>  
-        </td>
-        <td  style="width:15%">
+        </td>--%>
+        <%--<td  style="width:15%">
       <a href="#news">Contact Us</a>    
-           </td>
+           </td>--%>
           <td  style="width:15%">
       <a href="logout.aspx">Logout</a>
             </td>

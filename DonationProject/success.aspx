@@ -19,7 +19,7 @@
     </style>
     
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainPageContentPlaceHolder" runat="server">
     <div class="navbar">
          <table style="width:100%; height: 100%">
       <tr>
@@ -42,7 +42,7 @@
         <td  style="width:15%">
       <a href="LeaderBoard.aspx">Leader Board</a>
             </td>
-        <td  style="width:15%">
+      <%--  <td  style="width:15%">
       <div class="dropdown">
         <button class="dropbtn">Support 
         </button>
@@ -55,7 +55,7 @@
         </td>
         <td  style="width:15%">
       <a href="#news">Contact Us</a>    
-           </td>
+           </td>--%>
           <td  style="width:15%">
       <a href="logout.aspx">Logout</a>
             </td>
@@ -65,7 +65,9 @@
           </tr>
         </table>
     </div><!--end of nav bar-->
-    <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static"></asp:Label><br />
+    </asp:Content>
+   <%-- <asp:Label ID="Label1" runat="server" Text="Label" ClientIDMode="Static"></asp:Label><br />--%>
+    <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ChildMasterPage.aspx" ClientIDMode="Static">Play Again to achieve high score!!</asp:HyperLink>
     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="Rating.aspx" ClientIDMode="Static">Click here for rating</asp:HyperLink>
    

@@ -11,10 +11,10 @@
         <td  style="width:15%">
       <a href="Gamesplayed.aspx">Games Played</a>      
            </td>
-        <td  style="width:15%">
+       <%-- <td  style="width:15%">
       <a href="LeaderBoard.aspx">Leader Board</a>
-            </td>
-        <td  style="width:15%">
+            </td>--%>
+       <%-- <td  style="width:15%">
       <div class="dropdown">
         <button class="dropbtn">Support 
         </button>
@@ -24,13 +24,16 @@
           <a href="/Support/adSubmitPage.aspx">Post AD</a>         
         </div>
       </div>  
-            </td> 
-           <td  style="width:15%">
+            </td> --%>
+          <%-- <td  style="width:15%">
             <a href="#news">About Us</a>  
-           </td>
+           </td>--%>
           <td  style="width:15%">
       <a href="logout.aspx">Logout</a>
             </td>
+          <td>
+    <asp:Label ID="lb1" runat="server" Text="Label"></asp:Label>
+    </td>
           </tr>
         </table>
     </div>
